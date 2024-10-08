@@ -1,0 +1,73 @@
+.card{
+    margin-top: 100px;
+    padding: 30px;
+    position: relative;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgba(152, 5, 5, 0), rgba(153, 10, 17, 1)), url('/img/red.jfif');
+    margin: 10px;
+    background-size: contain;
+}
+.card-img{
+    width: 12em;
+    height: 12em;
+    filter: drop-shadow(10px 10px 10px rgba(0,5,3,0.7));
+}
+.bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom h2{
+    font-weight: 1000;
+    font-size: x-large;
+    line-height: 30px;
+    color: #FFF2C3;
+}
+.bar .h3{
+    font-weight:700;
+    font-size: 21px;
+    color:#390406;
+}
+.bar p{
+    color:#FFF2C3;
+    margin: 0;
+}
+.bar div{
+    display: flex;
+    align-items: center!important;
+    margin: 5px;
+}
+.white-icon{
+    color: #FFF2C3;
+}
+.add-button{
+    display: flex;
+    justify-content: space-around;
+}
+.add-div{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    background-color: green;
+    border-radius: 20px;
+}
+.bottom{
+    width: 90%;
+    margin-top: 20%;
+}
+.mat-warn{
+    background-color: #000!important;
+}
+.mat-primary{
+    background-color: #FFF2C3!important;
+    color:#390406!important;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.div-img{
+    position: absolute;
+    bottom: 72%;
+}

@@ -1,0 +1,34 @@
+.header{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+.menu{
+    display: flex;
+}
+.menu div{
+    margin: 10px;
+    font-weight:600 ;
+    color: #390406;
+    font-size: large;
+}
+.div-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+.icon{
+    font-size: 25px;
+}
+.example-icon{
+    width: 100px;
+}
+.mat-toolbar{
+    background-color: transparent;
+}

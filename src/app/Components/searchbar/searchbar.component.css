@@ -1,0 +1,25 @@
+.example-form {
+    position: relative;
+    top: 10px;
+    width: 30em;
+    background-color: transparent!important;
+}
+.example-full-width{
+    width: 100%;
+    background-color: transparent;
+}
+.label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between!important;
+    width: 38rem!important;
+}
+.icon{
+    font-size: 30px!important;
+}
+.input{
+    background-color: transparent;
+}
+.mat-mdc-text-field-wrapper{
+    background-color: transparent!important;
+}

@@ -1,0 +1,35 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mat-mdc-text-field-wrapper{
+    background-color: transparent!important;
+}
+.h1{
+    color:#69070C;
+    width: 400px;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+}
+.div-h1{
+    position: relative;
+    top: 50px;
+    left:400px;
+    color: #69070C;
+}
+.cercle{
+    position: absolute;
+    top: 5em;
+    right: 25em;
+    width: 200px;
+    height: 200px;
+    background-color: #FFF2C3;
+    border-radius: 100%;
+}
+::ng-deep .mat-mdc-text-field-wrapper {
+    background-color: transparent!important;
+    border-radius: 5px;
+}
