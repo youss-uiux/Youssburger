@@ -69,5 +69,14 @@
 }
 .div-img{
     position: absolute;
-    bottom: 72%;
+    bottom: 70%;
+}
+.arrow{
+    position: relative;
+    display: flex;
+    bottom: 40px;
+    justify-content: space-between;
+}
+.size{
+    transform: scale(2.3); 
 }

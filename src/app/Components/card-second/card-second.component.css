@@ -69,3 +69,7 @@
     bottom:73%;
     position: absolute;
 }
+.bar p{
+    color:#390406;
+    font-weight: 600;
+}

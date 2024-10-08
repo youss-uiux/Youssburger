@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {CardComponent }  from '../card/card.component';
 import {CardSecondComponent} from '../card-second/card-second.component';
 import { AgGridAngular } from 'ag-grid-angular';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [CardComponent,CardSecondComponent,AgGridAngular],
+  imports: [CardComponent,CardSecondComponent,MatIconModule],
   templateUrl: './body.component.html',
   changeDetection:ChangeDetectionStrategy.OnPush,
   styleUrl: './body.component.css'
