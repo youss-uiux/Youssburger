@@ -32,3 +32,9 @@
 .mat-toolbar{
     background-color: transparent;
 }
+.badge{
+    color: rgba(153, 10, 17, 1)!important;
+}
+.mat-badge-accent{
+    color: rgba(153, 10, 17, 1)!important;
+}

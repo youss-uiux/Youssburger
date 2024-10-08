@@ -1,4 +1,4 @@
-import { Component, HostBinding, HostListener, input, output,Output, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, HostListener, input, output,Output, signal } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -11,6 +11,7 @@ import { EventEmitter } from 'stream';
   standalone: true,
   imports: [MatButtonModule,MatSelectModule,MatFormFieldModule,MatIconModule,CurrencyPipe, DatePipe, TitleCasePipe],
   templateUrl: './card-second.component.html',
+  changeDetection:ChangeDetectionStrategy.OnPush,
   styleUrl: './card-second.component.css',
 })
 export class CardSecondComponent {
