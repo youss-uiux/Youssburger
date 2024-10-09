@@ -1,17 +1,9 @@
 <div class="card">
     <div class="div-img">
-        <img class="card-img" src="img/1.png"/>
+        <img class="card-img" [src]="image()"/>
     </div>
     <div class="bottom">
-        <div class="arrow">
-            <div>
-                <mat-icon fontSet="material-icons-round" class="white-icon size">chevron_left</mat-icon>
-            </div>
-            <div>
-                <mat-icon fontSet="material-icons-round" class="white-icon size">chevron_right</mat-icon>
-            </div>
-        </div>
-        <h2>Bacon Explosion Burger</h2>
+        <h2>{{name()}}</h2>
         <div class="div-bar">
             <div class="bar">
                 <div class="h3">Size</div>

@@ -66,10 +66,13 @@
     letter-spacing: 4px;
 }
 .div-img{
-    bottom:73%;
+    bottom:60%;
     position: absolute;
 }
 .bar p{
     color:#390406;
     font-weight: 600;
+}
+.red-icon{
+    color: rgba(153, 10, 17, 1);
 }

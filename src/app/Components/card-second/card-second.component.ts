@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component, HostBinding, HostListener, input, output,Output, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, HostBinding, HostListener, Inject, InjectionToken, Input, input, output,Output, signal } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';
 import { EventEmitter } from 'stream';
-
+import { Burger } from '../../../Model/Burger/burger';
 @Component({
   selector: 'app-card-second',
   standalone: true,
@@ -15,6 +15,11 @@ import { EventEmitter } from 'stream';
   styleUrl: './card-second.component.css',
 })
 export class CardSecondComponent {
-  image=input('img/1.png');
-  name =input('Name of burger')
+  @Input() obj!:Burger;
+  image=computed<string>(()=>{return this.obj.image});
+  name =computed<string>(()=>{return this.obj.name});
+  price=computed<number>(()=>{return this.obj.price});
+  calories=computed<number>(()=>{return this.obj.calories});
+  
+  
 }

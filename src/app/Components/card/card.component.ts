@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component,OnInit  } from '@angular/core';
+import { ChangeDetectionStrategy, Component,computed,Input,OnInit  } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
+import { Burger } from '../../../Model/Burger/burger';
 
 @Component({
   selector: 'app-card',
@@ -12,10 +13,10 @@ import {MatIconModule} from '@angular/material/icon';
   changeDetection:ChangeDetectionStrategy.OnPush,
   styleUrl: './card.component.css'
 })
-export class CardComponent implements OnInit {
-  public name: string | undefined;
-  constructor(){}
-  ngOnInit(): void {
-    this.name='Africa one shot ohh oui';
-  }
+export class CardComponent  {
+  @Input() obj!:Burger;
+  image=computed<string>(()=>{return this.obj.image});
+  name =computed<string>(()=>{return this.obj.name});
+  price=computed<number>(()=>{return this.obj.price});
+  calories=computed<number>(()=>{return this.obj.calories});
 }

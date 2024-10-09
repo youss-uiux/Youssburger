@@ -3,6 +3,7 @@ import { CardComponent } from '../card/card.component';
 import { CardSecondComponent } from '../card-second/card-second.component';
 import { NgComponentOutlet, NgTemplateOutlet } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Burger } from '../../../Model/Burger/burger';
 
 @Component({
   selector: 'app-main-card',
@@ -30,6 +31,10 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class MainCardComponent {
   isSelect=signal(true);
   index=input<number|null>(null);
+  price=input<number|null>(null);
+  name=input<string|null>(null);
+  image=input<string|null>(null);
+  obj=input<Burger|null>(null);
   getBioComponent() {
     return this.isSelect()?  CardComponent : CardSecondComponent;
   }
