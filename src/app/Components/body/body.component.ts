@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, QueryList, viewChild, ViewChild, viewChildren, ViewChildren } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, QueryList, viewChild, ViewChild, viewChildren, ViewChildren } from '@angular/core';
 import {CardComponent }  from '../card/card.component';
 import {CardSecondComponent} from '../card-second/card-second.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,7 +14,7 @@ import { Burger } from '../../../Model/Burger/burger';
   changeDetection:ChangeDetectionStrategy.OnPush,
   styleUrl: './body.component.css'
 })
-export class BodyComponent {
+export class BodyComponent  implements AfterViewInit {
   burgers: Burger[] = [
     {
       index:1,
@@ -54,7 +54,6 @@ export class BodyComponent {
   ];
   @ViewChildren(MainCardComponent) mainCardComponent!: QueryList<MainCardComponent>;
   change(index:number){
-    console.log(index);
     this.mainCardComponent.forEach(card=>{
       if(card.index() !== index){
         card.isSelect.set(false);
@@ -64,5 +63,16 @@ export class BodyComponent {
       }
     })
   }
-    
+  ngAfterViewInit(): void {
+    if (this.mainCardComponent.first) {
+      this.mainCardComponent.forEach(card=>{
+        if(card.index() === 1){
+          card.isSelect.set(true);
+        }
+        else{
+          card.isSelect.set(false);
+        }
+      })
+    }
+  }
 }
